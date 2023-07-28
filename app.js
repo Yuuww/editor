@@ -5,10 +5,6 @@ let pressedTool = null;
 
 const toolFunctions = [toggleItems, openSettings];
 
-document.addEventListener('DOMContentLoaded', () => {
-    sendRequest();
-});
-
 document.addEventListener('mouseup', (data) => {
     if(hoverState != null && hoverState === pressedTool[1]) {
         toolFunctions[pressedTool[1]]();
@@ -62,5 +58,5 @@ function toggleItems() {
 }
 
 function openSettings() {
-    console.log('open settings');
+    sendRequest();
 }
