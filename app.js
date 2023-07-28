@@ -43,7 +43,7 @@ function sendRequest() {
         return sendRequest();
     }
   
-    fetch('http://localhost:3001/api/content', {
+    fetch('http://45.81.234.8:3001/api/content', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ password })
