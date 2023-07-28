@@ -39,7 +39,7 @@ function sendRequest() {
         return;
     }
   
-    fetch('http://45.81.234.8:3001/api/content', {
+    fetch('https://45.81.234.8:3001/api/content', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ password })
