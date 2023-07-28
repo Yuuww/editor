@@ -40,7 +40,7 @@ Array.from(workspace.children[0].getElementsByTagName('div')[0].getElementsByTag
 function sendRequest() {
     const password = prompt('Bitte gib dein Passwort ein:');
     if (!password) {
-        return sendRequest();
+        return;
     }
   
     fetch('http://45.81.234.8:3001/api/content', {
