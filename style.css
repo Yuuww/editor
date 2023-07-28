@@ -1,0 +1,61 @@
+#workspace {
+    margin: 0;
+    background-color: #202020;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    > :first-child {
+        transition: width 0.2s;
+        transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: auto auto;
+        > :first-child {
+            padding: 4px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            > div {
+                margin: 0 4px;
+                border-radius: 6px;
+                height: 32px;
+                width: 32px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                > svg {
+                    transition: width 0.1s;
+                    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+                    > path {
+                        fill: #a0a0a0;
+                    }
+                }
+            }
+            > div:hover {
+                cursor: pointer;
+                background-color: #ffffff10;
+            }
+        }
+        > :last-child {
+            border-style: solid;
+            border-width: 0 1px;
+            border-color: #303030;
+            background-color: #191919;
+            width: 258px;
+        }
+    }
+}
+
+.open {
+    width: 32px;
+}
+.isOpen {
+    width: 300px;
+}
+.isClosed {
+    width: 40px;
+}
+.isPressed {
+    width: 24px;
+}
