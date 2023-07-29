@@ -54,7 +54,6 @@ function login() {
   .then(data => {
     if(data.response === true) {
       pw = password;
-      loadData();
     } else {
       pw = null;
     }
