@@ -39,7 +39,7 @@ function sendRequest() {
         return;
     }
   
-    fetch('https://api.get-done.de/login', {
+    fetch('https://api.get-done.de:3001/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ password })
