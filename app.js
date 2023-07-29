@@ -48,7 +48,7 @@ function login() {
   fetch('https://api.get-done.de:3001/login', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: { password: password }//JSON.stringify({ password })
+    body: JSON.stringify({ password: password })
   })
   .then(response => response.json())
   .then(data => {
@@ -70,7 +70,7 @@ function read() {
   fetch('https://api.get-done.de:3001/read', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: { password: pw }
+    body: JSON.stringify({ password: pw })
   })
   .then(response => response.json())
   .then(data => {
