@@ -40,6 +40,8 @@ function openSettings() {
 }
 
 let pw = null;
+let sitedata = null;
+let openfile = null;
 
 // API Stuff
 function login() {
@@ -74,9 +76,38 @@ function read() {
   })
   .then(response => response.json())
   .then(data => {
-    console.log(data);
+    sitedata = data;
+    reloadItems();
   })
   .catch(error => {
     console.error('Fehler bei der API-Anfrage:', error);
   });
+}
+
+// Reload
+
+function reloadItems() {
+  let items = "";
+  for (const file of sitedata.data) {
+    items += `<div onClick="openFile('${file.name}')">${file.name}</div>`
+  }
+  workspace.children[0].getElementsByTagName('div')[0].innerHTML = items;
+}
+
+function reloadEditor() {
+  let lines = ""
+  for (const file of sitedata.data) {
+    if(file.name == openfile) {
+      for (const line of file.content.split('\n')) {
+        lines += `<div>${line}</div>`;
+      }
+    }
+  }
+  workspace.children[1].innerHTML = lines;
+}
+
+function openFile(name) {
+  openfile = name;
+  reloadEditor();
+  console.log(name);
 }
