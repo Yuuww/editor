@@ -70,7 +70,7 @@ function read() {
   fetch('https://api.get-done.de:3001/read', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ password })
+    body: JSON.stringify({ pw })
   })
   .then(response => response.json())
   .then(data => {
