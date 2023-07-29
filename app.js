@@ -91,7 +91,7 @@ function reloadItems() {
   for (const file of sitedata.data) {
     items += `<div onClick="openFile('${file.name}')">${file.name}</div>`
   }
-  workspace.children[0].getElementsByTagName('div')[0].innerHTML = items;
+  workspace.children[0].getElementsByTagName('div')[1].innerHTML = items;
 }
 
 function reloadEditor() {
