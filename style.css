@@ -46,11 +46,16 @@
             > div {
                 margin: 4px;
                 border-radius: 6px;
-                height: 32px;
+                padding: 0 0 0 20px;
+                height: 26px;
                 color: #a0a0a0;
                 font-family: monospace;
                 display: flex;
                 align-items: center;
+            }
+            > div:hover {
+                cursor: pointer;
+                background-color: #303030;
             }
         }
     }
