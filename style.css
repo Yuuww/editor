@@ -43,6 +43,15 @@
             border-color: #303030;
             background-color: #191919;
             width: 258px;
+            > div {
+                margin: 4px;
+                border-radius: 6px;
+                height: 32px;
+                color: #a0a0a0;
+                font-family: monospace;
+                display: flex;
+                align-items: center;
+            }
         }
     }
 }

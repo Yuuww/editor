@@ -91,7 +91,7 @@ function reloadItems() {
   for (const file of sitedata.data) {
     items += `<div onClick="openFile('${file.name}')">${file.name}</div>`
   }
-  workspace.children[0].getElementsByTagName('div')[3].innerHTML = items;
+  workspace.children[0].getElementsByTagName('div')[workspace.children[0].getElementsByTagName('div').length - 1].innerHTML = items;
 }
 
 function reloadEditor() {
@@ -103,7 +103,7 @@ function reloadEditor() {
       }
     }
   }
-  workspace.children[1].innerHTML = lines;
+  workspace.children[1].getElementsByTagName('div')[0].innerHTML = lines;
 }
 
 function openFile(name) {
