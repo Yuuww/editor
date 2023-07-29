@@ -60,7 +60,7 @@
             }
         }
     }
-    > :last-child {
+    > article {
         margin: 0 auto;
         > div {
             overflow-y: scroll;
