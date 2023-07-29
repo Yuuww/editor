@@ -74,9 +74,7 @@ function read() {
   })
   .then(response => response.json())
   .then(data => {
-    if(data.response === true) {
-      console.log(data);
-    }
+    console.log(data);
   })
   .catch(error => {
     console.error('Fehler bei der API-Anfrage:', error);
