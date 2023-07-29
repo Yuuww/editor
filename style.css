@@ -41,6 +41,7 @@
             border-style: solid;
             border-width: 0 1px;
             border-color: #303030;
+            overflow-y: scroll;
             background-color: #191919;
             width: 258px;
             > div {
@@ -57,6 +58,15 @@
                 cursor: pointer;
                 background-color: #303030;
             }
+        }
+    }
+    > :last-child {
+        margin: 0 auto;
+        > div {
+            overflow-y: scroll;
+            width: 800px;
+            font-family: monospace;
+            color: #a0a0a0;
         }
     }
 }
