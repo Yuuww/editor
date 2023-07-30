@@ -62,6 +62,7 @@
     }
     > article {
         margin: 0 auto;
+        max-width: 800px;
         > div {
             overflow-y: scroll;
             width: 800px;
@@ -82,4 +83,29 @@
 }
 .isPressed {
     width: 24px;
+}
+
+
+
+
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #303030 #0000;
+}
+*::-webkit-scrollbar {
+    width: 8px;
+}
+*::-webkit-scrollbar-track {
+    background-color: #0000;
+}
+*::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background-color: #0000;
+}
+*:hover::-webkit-scrollbar-thumb {
+    background-color: #303030;
+}
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #a0a0a0;
 }
